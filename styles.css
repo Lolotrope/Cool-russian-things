@@ -1,0 +1,60 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav a {
+    color: rgb(97, 173, 255);
+    text-decoration: none;
+}
+
+main section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: rgb(97, 173, 255);
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.portrait {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    float: right;
+    margin-left: 20px;
+}
+
+#facts ol {
+    counter-reset: item;
+    list-style: none;
+    padding-left: 0;
+}
+
+#facts ol > li::before {
+    content: counter(item);
+    counter-increment: item;
+    color:rgb(97, 173, 255);
+    font-weight: bold;
+    margin-right: 10px;
+}
