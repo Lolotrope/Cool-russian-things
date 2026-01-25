@@ -3,54 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Примеры изображений, созданных ИИ</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="ico.ico">
+    <title>Примеры изображений, созданных искусственным интеллектом</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        /* ШАПКА HEADER */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 20px;
+            display: flex; /* Используем Flexbox для горизонтального выравнивания */
+            align-items: center; /* Центрируем элементы по вертикали */
+        }
+        
+        /* Логотип */
+        .logo img {
+            height: 120px; /* Регулировка высоты логотипа */
+        }
+        
+        /* Шапка и контент расположены рядом друг с другом */
+        .header-content {
+            margin-left: 20px; /* Пространство слева от логотипа */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Центрируем текст по вертикали */
+        }
+        
+        h1, h3 {
+            margin: 0; /* Удаляем стандартные отступы заголовков */
+        }
+        
+        /* Обертка для логотипа и текста шапки */
+        .logo-container {
+            display: flex;
+            align-items: center; /* Центрируем элементы по вертикали */
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        section {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 20px; /* Добавляем небольшой отступ снизу */
+        }
+
+        /* Контейнер с основным контентом и правой боковой панелью */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Основное содержание */
+        main {
+            flex-basis: 77%; /* Ширина основного контента */
+        }
+
+        /* Боковая панель */
+        aside {
+            flex-basis: 20%; /* Ширина боковой панели */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+        }
+        
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        aside li {
+            margin-bottom: 10px;
+        }
+        
+        /* Новый стиль для пунктов меню */
+        .elementy {
+            color: #524E49; /* Цвет текста */
+            background: #e3e4e4; /* Фоновый цвет */
+            padding: 10px; /* Внутренний отступ текста от границ */
+            font-size: 20px; /* Размер текста */
+            border-radius: 5px; /* Закругление уголков */
+            box-shadow: 0px 1px 3px; /* Тень */
+            transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); /* Анимация */
+            display: inline-block; /* Сделаем ссылки блоковыми элементами */
+            text-decoration: none; /* Убираем подчёркивание */
+            min-width: 260px; /* Фиксированная ширина для выравнивания размеров */
+            text-align: center; /* Выравниваем текст внутри блоков */
+        }
+        
+        /* Эффект при наведении */
+        .elementy:hover {
+            transform: translate(10px); /* Смещаемся вправо */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Меняем тень */
+        }
+
+        /* Стили для секции примеров изображений */
+        .example {
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .description {
+            text-align: center;
+            font-style: italic;
+            color: #888; /* Обесцветим надпись описания изображений */
+        }
+
+        /* Размеры изображений уменьшены */
+        .example img {
+            display: block;
+            margin: 0 auto;
+            width: 300px;
+            transition: transform 0.5s ease;
+        }
+
+        /* Увеличение изображения при наведении */
+        .example img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Скриптовая кнопка перехода вверх сделана крупнее и ярче */
+        #scroll-to-top-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: rgba(51, 51, 51, 0.7);
+            color: white;
+            padding: 15px; /* Больше внутреннего пространства */
+            font-size: 24px; /* Больший размер значка */
+            border-radius: 50%;
+            display: none;
+            transition: background-color 0.3s ease;
+        }
+
+        #scroll-to-top-btn:hover {
+            background-color: rgba(51, 51, 51, 1);
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-    <main>
-        <h1>Примеры изображений, созданных искусственным интеллектом</h1>
-        <hr />
-
-        <p>Современные технологии позволяют создавать уникальные визуальные произведения искусства буквально нажатием кнопки. Сегодня процесс генерации изображений стал доступен каждому благодаря развитию искусственного интеллекта и алгоритмов глубокого обучения. Изображения, представленные ниже, были созданы именно таким способом.</p>
-
-        <p>Для создания изображений используются специальные модели машинного обучения, такие как GAN (Generative Adversarial Networks). Эти сети состоят из двух частей: генератора, который создаёт новые изображения, и дискриминатора, проверяющего реалистичность полученных результатов. Таким образом, генератор учится создавать всё более качественные изображения, пока дискриминатор перестаёт различать настоящие фотографии и искусственно созданные изображения.</p>
-
-        <div class="example">
-            <img src="generated_image_1.jpeg" alt="Пример 1">
-            <p class="description">Пример №1: пейзаж гор, созданный ИИ</p>
+    <header>
+        <!-- Блок с логотипом и текстом шапки -->
+        <div class="logo-container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <div class="header-content">
+                <h1>Крутые штучки</h1>
+                <h3>Мир Искусственного Интеллекта</h3>
+            </div>
         </div>
-
-        <p>Особенность подхода заключается в том, что разработчик может задать определённые условия, такие как жанр, стиль или тематику изображения, и получать предсказуемый результат. Например, изображение природы может выглядеть живописнее, а лицо человека может приобрести характерные черты конкретных художников.</p>
-
-        <blockquote>"ИИ открывает новую эру творчества, позволяя людям экспериментировать с визуальным искусством совершенно новыми способами."</blockquote>
-
-        <div class="example">
-            <img src="generated_image_2.jpeg" alt="Пример 2">
-            <p class="description">Пример №2: портрет девушки, нарисованный ИИ</p>
-        </div>
-
-        <p>Создание образов становится не только интересным развлечением, но и мощным инструментом дизайна и маркетинга. Алгоритмы способны значительно ускорить работу дизайнеров, предлагая разнообразные идеи и концепции за считанные секунды.</p>
-
-        <div class="example">
-            <img src="generated_image_3.jpeg" alt="Пример 3">
-            <p class="description">Пример №3: абстрактное искусство, сгенерированное ИИ</p>
-        </div>
-
-        <p>Однако важно помнить, что творчество искусственного интеллекта отличается от человеческого вдохновения. Несмотря на способность ИИ подражать стилям известных мастеров живописи или создавать оригинальные образы, эмоциональный подтекст остаётся прерогативой человека. Поэтому изображения, созданные такими моделями, представляют собой скорее уникальный инструмент расширения возможностей творческих профессионалов, нежели полноценную замену человеческой креативности.</p>
-
-        <p>Таким образом, мы видим начало нового этапа взаимодействия между человеком и машиной, где техника помогает раскрывать творческий потенциал и выводит искусство на новый уровень развития.</p>
-    </main>
-
-    <aside>
+    </header>
+    
+    <nav>
         <ul>
-            <li><a href="index.html">➲ Главная</a></li>
-            
-            <li><a href="videos.html">➲ Видео</a></li>
-            <li><a href="audios.html">➲ Аудио</a></li>
-            <li><a href="poet.html">➲ ИИ-поэт</a></li>
+            <li><a href="http://it.doal.ru">Фестиваль</a></li>
+            <li><a href="http://doal.ru">Департамент образования города Липецка</a></li>
+            <li><a href="http://ddt48.ru">Дом творчества «Октябрьский»</a></li>
         </ul>
-    </aside>
-</div>
+    </nav>
+
+    <div class="container">
+        <main>
+            <h1>Примеры изображений, созданных искусственным интеллектом</h1>
+            <hr />
+            
+            <p>Современный мир позволяет каждому почувствовать себя художником всего лишь одним кликом мыши. Благодаря искусственному интеллекту и технологиям глубокого обучения, создание уникальных произведений искусства стало доступным широкому кругу пользователей. Мы собрали коллекцию ярких иллюстраций, каждая из которых была создана исключительно силами AI-моделей.</p>
+
+            <p>Каждая работа демонстрирует возможности искусственного интеллекта в создании сложных визуальных композиций, начиная от пейзажа гор и заканчивая абстрактными произведениями. Представленные изображения отражают развитие новых технологий и показывают, насколько далеко продвинулись алгоритмы в области творческой выразительности.</p>
+
+            <div class="example">
+                <img src="generated_image_1.jpeg" alt="Пример 1">
+                <p class="description">Пример №1: великолепный пейзаж горных хребтов, созданный искусственным интеллектом</p>
+            </div>
+
+            <p>Эти работы подчеркивают удивительную гибкость современных моделей, позволяющих художникам и дизайнерам быстро тестировать разные идеи и вдохновляться бесконечными возможностями творчества.</p>
+
+            <div class="example">
+                <img src="generated_image_2.jpeg" alt="Пример 2">
+                <p class="description">Пример №2: завораживающий портрет девушки, нарисованный искусственным интеллектом</p>
+            </div>
+
+            <p>Создаваемые AI-изображения расширяют границы традиционного понимания искусства, объединяя инновационные подходы и классическое эстетическое восприятие. Теперь каждый может стать автором потрясающей картины, независимо от уровня мастерства и опыта.</p>
+
+            <div class="example">
+                <img src="generated_image_3.jpeg" alt="Пример 3">
+                <p class="description">Пример №3: абстрактное произведение искусства, созданное искусственным интеллектом</p>
+            </div>
+
+            <p>Присоединяйтесь к этому увлекательному путешествию в мир цифровых искусств вместе с нашим проектом. Наслаждайтесь яркими работами и оценивайте достижения современного цифрового творчества!</p>
+        </main>
+
+        <aside>
+            <ul>
+                <li><a href="./index.html" class="elementy">➲ Главная</a></li>
+                <li><a href="./music.html" class="elementy">➲ Музыка и песни</a></li>
+                <li><a href="./poet.html" class="elementy">➲ ИИ-поэт</a></li>
+                <li><a href="./video.html" class="elementy">➲ Видео</a></li>
+                <li><a href="./useful_links.html" class="elementy">➲ Полезные ссылки</a></li>
+            </ul>
+        </aside>
+    </div>
+    
+    <button id="scroll-to-top-btn" title="Вернуться к началу страницы">↑</button>
+
+    <footer>
+        © 2026 МБОУ СОШ № 36 г. Липецка
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollBtn = document.querySelector('#scroll-to-top-btn');
+            scrollBtn.style.display = 'none'; // Изначально скрываем кнопку
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollBtn.style.display = 'block';
+                } else {
+                    scrollBtn.style.display = 'none';
+                }
+            });
+
+            scrollBtn.addEventListener('click', () => {
+                window.scrollTo({top: 0, behavior: 'smooth'}); // Плавный скроллинг к началу страницы
+            });
+        });
+    </script>
 </body>
 </html>
