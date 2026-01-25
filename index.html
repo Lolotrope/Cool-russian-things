@@ -3,19 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Крутые штучки</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        section {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Контейнер с основным контентом и правой боковой панелью */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Основное содержание */
+        main {
+            flex-basis: 65%; /* Ширина основного контента */
+        }
+
+        /* Боковая панель */
+        aside {
+            flex-basis: 30%; /* Ширина боковой панели */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+        }
+        
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        aside li {
+            margin-bottom: 10px;
+        }
+        
+        aside a {
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        aside a:hover {
+            color: #ff6b6b;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1 style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Крутые штучки</h1>
+        <h1>Крутые штучки</h1>
         <h3>Мир Искусственного Интеллекта</h3>
     </header>
     
     <nav>
         <ul>
-            <li><a href="https://www.doal.ru/" target="_blank" style="color: black;">Департамент образования</a></li>
-            <li><a href="https://sc36lip.gosuslugi.ru/" target="_blank" style="color: black;">Школа №36</a></li>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Обучение</a></li>
+            <li><a href="#">Контакты</a></li>
         </ul>
     </nav>
 
@@ -50,8 +142,11 @@
 
         <aside>
             <ul>
-            <li><a href="images.html">➲ Изображения</a></li>
-            
+                <li><a href="/index.html">➲ Главная</a></li>
+                <li><a href="/text-gen.html">➲ Генератор текста</a></li>
+                <li><a href="/music.html">➲ Музыка и песни</a></li>
+                <li><a href="/poet.html">➲ ИИ-поэт</a></li>
+                <li><a href="/video.html">➲ Видео</a></li>
             </ul>
         </aside>
     </div>
