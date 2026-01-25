@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="ico.ico">
+    <title>Примеры музыки и песен, созданных искусственным интеллектом</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        /* ШАПКА HEADER */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Логотип */
+        .logo img {
+            height: 120px;
+        }
+        
+        /* Шапка и контент расположены рядом друг с другом */
+        .header-content {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        h1, h3 {
+            margin: 0;
+        }
+        
+        /* Обертка для логотипа и текста шапки */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        section {
+            max-width: 850px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 20px;
+        }
+
+        /* Контейнер с основным контентом и правой боковой панелью */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Основное содержание */
+        main {
+            flex-basis: 77%;
+        }
+
+        /* Боковая панель */
+        aside {
+            flex-basis: 20%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,.1);
+        }
+        
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        aside li {
+            margin-bottom: 10px;
+        }
+        
+        /* Новый стиль для пунктов меню */
+        .elementy {
+            color: #524E49;
+            background: #e3e4e4;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 1px 3px;
+            transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: inline-block;
+            text-decoration: none;
+            min-width: 260px;
+            text-align: center;
+        }
+        
+        /* Эффект при наведении */
+        .elementy:hover {
+            transform: translate(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Стили для секции примеров изображений */
+        .example {
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .description {
+            text-align: center;
+            font-style: italic;
+            color: #888;
+        }
+
+        /* Размеры изображений уменьшены */
+        .example img {
+            display: block;
+            margin: 0 auto;
+            width: 300px;
+            transition: transform 0.5s ease;
+        }
+
+        /* Увеличение изображения при наведении */
+        .example img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Скриптовая кнопка перехода вверх сделана крупнее и ярче */
+        #scroll-to-top-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: rgba(51, 51, 51, 0.7);
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            border-radius: 50%;
+            display: none;
+            transition: background-color 0.3s ease;
+        }
+
+        #scroll-to-top-btn:hover {
+            background-color: rgba(51, 51, 51, 1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo"><img src="logo.png" alt="Logo"></div>
+            <div class="header-content">
+                <h1>Крутые штучки</h1>
+                <h3>Мир Искусственного Интеллекта</h3>
+            </div>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="http://it.doal.ru">Фестиваль</a></li>
+            <li><a href="http://doal.ru">Департамент образования города Липецка</a></li>
+            <li><a href="http://ddt48.ru">Дом творчества «Октябрьский»</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <h1>Примеры музыки и песен, созданных искусственным интеллектом</h1>
+            <hr />
+
+        <p>Современный этап развития технологий позволяет легко создавать высококачественные звуковые композиции, речь и музыкальные треки всего лишь несколькими кликами мыши. Благодаря искусственному интеллекту эта задача стала доступна любому человеку, даже без музыкального образования или глубоких технических навыков.</p>
+
+        <p>Основой методов является использование сложных нейронных сетей, таких как Autoencoder или Variational Autoencoders (VAE), которые создают звуки на основе заданных характеристик и предпочтений пользователя. Например, композитор может указать настроение мелодии («весёлая», «грустная»), темп, длительность и стилистику исполнения, а система предложит соответствующий трек.</p>
+
+        <div class="example">
+            <audio controls>
+                <source src="generated_music_1.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает проигрывание аудио.
+            </audio>
+            <p class="description">Пример №1: музыкальная композиция, созданная ИИ</p>
+        </div>
+
+        <p>Одной из наиболее интересных областей применения ИИ в звуковой сфере является синтез речи. Нейросети могут воспроизводить голосовые записи любого уровня качества и точности, имитируя практически любые голоса. Такой подход используется в озвучивании фильмов, играх, системах виртуальных ассистентов и даже образовательных программах.</p>
+
+        <blockquote>"Звук, создаваемый искусственным интеллектом, способен звучать убедительно и естественно, открывая путь новым формам художественного самовыражения."</blockquote>
+
+        <div class="example">
+            <audio controls>
+                <source src="generated_music_2.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает проигрывание аудио.
+            </audio>
+            <p class="description">Пример №2: переделанная песня ИИ</p>
+        </div>
+
+        <p>Несмотря на очевидные преимущества, существует ряд этических вопросов, связанных с технологией синтеза речи и музыки. Важно соблюдать баланс между возможностями инструмента и защитой авторских прав, предотвращая неправомерное использование материалов.</p>
+
+        <div class="example">
+            <audio controls>
+                <source src="generated_audio_3.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает проигрывание аудио.
+            </audio>
+            <p class="description">Пример №3: абстрактный музыкальный фрагмент, созданный ИИ</p>
+        </div>
+
+        <p>Искусственный интеллект продолжает развиваться, постепенно становясь важнейшим компонентом современных процессов создания и обработки звука. Технологии открывают перспективы для новых жанров музыки, способов повествования и выражения эмоций, обеспечивая нам свободу творчества и выразительности.</p>
+
+            
+            <p>Добавь сюда своё содержимое</p>
+        </main>
+
+        <aside>
+            <ul>
+                <li><a href="./index.html" class="elementy">➲ Главная</a></li>
+                <li><a href="./images.html" class="elementy">➲ Изображения</a></li>
+                <li><a href="./poet.html" class="elementy">➲ ИИ-поэт</a></li>
+                <li><a href="./video.html" class="elementy">➲ Видео</a></li>
+                <li><a href="./useful_links.html" class="elementy">➲ Полезные ссылки</a></li>
+            </ul>
+        </aside>
+    </div>
+    
+    <button id="scroll-to-top-btn" title="Вернуться к началу страницы">↑</button>
+
+    <footer>
+        © 2026 МБОУ СОШ № 36 г. Липецка
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const scrollBtn = document.querySelector('#scroll-to-top-btn');
+            scrollBtn.style.display = 'none';
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollBtn.style.display = 'block';
+                } else {
+                    scrollBtn.style.display = 'none';
+                }
+            });
+
+            scrollBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
